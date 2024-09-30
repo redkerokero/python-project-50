@@ -1,9 +1,11 @@
 #!/usr/bin/env python3
+"""Entry point of project. Script implement user interface."""
 import argparse
 from gendiff.makediff import generate_diff
 
 
 def main():
+    """Implement user interface."""
     parser = argparse.ArgumentParser(
         description='Compares two configuration files and shows a difference.',
     )
