@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
+
 """Entry point of project. Script implement user interface."""
 import argparse
+
 from gendiff.makediff import generate_diff
 
 
@@ -19,4 +21,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
