@@ -23,4 +23,4 @@ test:
 	poetry run pytest
 
 test-coverage:
-	poetry run pytest --cov=gendiff
+	coverage report -m
