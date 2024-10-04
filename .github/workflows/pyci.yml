@@ -25,12 +25,9 @@ jobs:
         run: |
           make lint
           make test
-      - name: Test & publish code coverage
-        uses: paambaati/codeclimate-action@v5.0.0
-        if: github.ref_name == 'main'
+      - name: Test
+        uses: paambaati/codeclimate-action@v2.7.5
         env:
-          CC_TEST_REPORTER_ID: ${{ secrets.CC_TEST_REPORTER_ID }}
+          CC_TEST_REPORTER_ID: ${{ secrets.TEST_REPORTER_ID }}
         with:
-          coverageCommand: pytest --cov=gendiff
-          workingDirectory: /usr/bin/
-          debug: true
+          coverageCommand: make test-coverage
